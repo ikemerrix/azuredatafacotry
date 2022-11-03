@@ -1,8 +1,9 @@
 param location string = resourceGroup().location
 // param name string
 
-module azureDatafactory '../bicepmodules/azureDataFactory' = {
-  name: 'appserviceDeploy'
+// from container registry 'br:myacr.azurecr.io/bicepmodules/azureDataFactory:v1' 
+module azureDatafactory '../bicepmodules/azureDataFactory' = {  
+  name: 'azureDatafactory'
   params:   {
     location: location
   }
